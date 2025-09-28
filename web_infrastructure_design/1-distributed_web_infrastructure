@@ -1,0 +1,20 @@
+# Distributed Web Infrastructure
+
+## Architecture Diagram
+## Components
+- **Load Balancer (HAproxy)**: Distributes incoming requests to multiple servers.
+  - Distribution Algorithm: Round-robin (evenly distributes requests).
+  - Setup: Active-Active (both load balancers handle traffic simultaneously).
+- **Web/App Servers (2 servers)**: Each has Nginx, app server, application files, and MySQL.
+- **Database**: Primary-Replica (Master-Slave) setup.
+  - Primary handles writes.
+  - Replica handles reads.
+
+## Benefits
+- Reduces SPOF for web servers.
+- Can scale horizontally by adding more servers.
+
+## Issues
+- **SPOF**: Load balancer itself can fail if not clustered.
+- **Security**: No firewall or HTTPS implemented.
+- **Monitoring**: Not included yet.

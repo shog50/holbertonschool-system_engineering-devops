@@ -1,0 +1,15 @@
+# Scale Up Web Infrastructure
+
+
+## Components
+- **Additional Server**: Splits responsibilities for better performance.
+- **Load Balancer Cluster**: Ensures high availability and traffic distribution.
+- **Separated Components**:
+  - Web Server on one server
+  - Application Server on another
+  - Database Server on another
+
+## Benefits
+- Improved scalability.
+- Better fault isolation.
+- Easier maintenance.

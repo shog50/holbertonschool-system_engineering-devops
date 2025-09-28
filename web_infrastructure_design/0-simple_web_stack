@@ -1,0 +1,22 @@
+# Simple Web Stack
+
+## Architecture Diagram
+
+
+## Components
+- **Domain Name**: www.foobar.com points to IP 8.8.8.8 using a **CNAME/A record**.
+- **Server**: Physical or virtual machine hosting all components.
+- **Web Server (Nginx)**: Handles HTTP requests and serves static content.
+- **Application Server**: Runs dynamic code and business logic.
+- **Application Files**: The code base for the website.
+- **Database (MySQL)**: Stores and retrieves data for the application.
+
+## Communication
+- The user requests `www.foobar.com`, DNS resolves to the server IP.
+- Browser communicates via HTTP with the web server, which forwards dynamic requests to the app server.
+- The app server queries the database if needed and returns results to the web server.
+
+## Issues
+- **SPOF (Single Point of Failure)**: Only one server; if it fails, the site is down.
+- **Downtime during maintenance**: Restarting the server or web server causes outage.
+- **Scalability limits**: Cannot handle high traffic efficiently.

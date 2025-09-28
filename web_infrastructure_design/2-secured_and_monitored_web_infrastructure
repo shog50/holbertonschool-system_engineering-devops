@@ -1,0 +1,17 @@
+# Secured and Monitored Web Infrastructure
+
+## Architecture Diagram
+
+## Components
+- **Firewalls (3)**: Protect each server from unauthorized access.
+- **SSL Certificate**: Enables HTTPS for encrypted traffic to www.foobar.com.
+- **Monitoring Clients (3)**: Collect metrics and logs from servers for tools like Sumologic.
+
+## Benefits
+- Secured traffic and servers.
+- Monitoring provides insights into system health and QPS (queries per second).
+
+## Issues
+- **SSL termination at Load Balancer**: Backend traffic may be unencrypted if not configured properly.
+- **Single MySQL writable node**: Limits scalability and fault tolerance.
+- **Servers with same components**: Resource contention, harder to maintain.
